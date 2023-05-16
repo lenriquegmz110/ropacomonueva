@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js'></script>
+    <script src='https://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places&amp;key=AIzaSyCh1gZvUsD9ljetIt-i5jfTPtXhHB8uq7Y'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+form{
+  width:900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Poppins;
+  font-size:17px;
+}
+
+.hform {
+   display: flex; 
+   text-align: left; 
+   border-bottom: 1px solid #000; 
+   line-height: 0.1em;
+  font-size: 17px;
+  font-weight:600;
+  width:100%;
+} 
+
+.hform span {  
+    padding:10px 0px; 
+}
+
+input, select, textarea{
+  border-radius:5px;
+  height:40px;
+  border: 1px solid #d3d3d3;
+  font-family: Poppins;
+  color: #000;
+  width:415px !important;
+}
+
+input:focus, select:focus, textarea:focus{
+      color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+}
+
+.msj {
+  height:40px;
+  font-size:12px;
+  background: #d3d3d3;
+  padding:0;
+  border: 1px solid #dddddd;
+  border-radius:7px;
+  border-left:20px solid #5655EF;
+  margin-top:25px;
+  width:92%;
+}
+
+.msj p{
+  width:auto;
+  margin:0 10px;
+}
+.submit{
+  background-color: #5655ef !important;
+  color: #fff;
+  height:70px;
+  font-size:22px;
+  text-transform: uppercase;
+  margin:30px;
+}
+
+#mensajetxt{
+  width:100% !important;
+  height:100px;
+}
+
+.submit:hover{
+  background-color: #403fc3 !important;
+  color: #fff;
+  height:70px;
+  font-size:22px;
+  text-transform: uppercase;
+  margin:30px;
+}
+
+.required:after{
+ content:"*";
+  color: #d33;
+}
+
+.col {
+  padding: 10px;
+  margin: 5px 0;
+}
+
+/* GENERAL GRID STYLES */
+
+.col {
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 980px) {
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+ 
+  .col {
+    flex: 1;
+  }
+ 
+  .col-05 {
+    flex: 0.5;
+  }
+
+  .col-10 {
+    flex: 1;
+  }
+
+  .col-15 {
+    flex: 1.5;
+  }
+  
+  .col-20 {
+    flex: 2;
+  }
+  
+  .col-25 {
+    flex: 2.5;
+  }
+  
+  .col-30 {
+    flex: 3;
+  }
+  
+  .col-35 {
+    flex: 3.5;
+  }
+
+  .col-40 {
+    flex: 4;
+  }
+  
+  .col-45 {
+    flex: 4.5;
+  }
+  
+  .col-50 {
+    flex: 5;
+  }
+  
+  .col-55 {
+    flex: 5.5;
+  }
+  
+  .col-60 {
+    flex: 6;
+  }
+  
+  .col-65 {
+    flex: 6.5;
+  }
+  
+  .col-70 {
+    flex: 7;
+  }
+  
+  .col-75 {
+    flex: 7.5;
+  }
+  
+  .col-80 {
+    flex: 8;
+  }
+  
+  .col-85 {
+    flex: 8.5;
+  }
+  
+  .col-90 {
+    flex: 9;
+  }
+  
+  .col-95 {
+    flex: 9.5;
+  }
+
+}
+
+
+@media screen and (min-width: 360px) and (max-width:768px){
+  .hform {
+  width:360px;
+} 
+  
+  .msj {
+  height:40px;
+  font-size:12px;
+  background: #d3d3d3;
+  padding:0;
+  border: 1px solid #dddddd;
+  border-radius:7px;
+  border-left:20px solid #5655EF;
+  margin-top:25px;
+  width:400px;;
+}
+
+.msj p{
+  width:auto;
+  margin:0 10px;
+}
+  
+  #mensajetxt{
+  width:47% !important;
+  height:100px;
+}
+  .msjfooter{
+    width:49%;
+  }
+  
+  .enviar{
+    width:50%;
+  }
+  
+    .radio{
+  margin-top:-30px;
+  width:47%;
+}
+}
+
+
+
+#mensaje {
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.exito {
+  background-color: #C1E2B3;
+  color: #4F8A10;
+}
+
+.error {
+  background-color: #F8D7DA;
+  color: #721C24;
+}
+
+.radio{
+  margin-top:-30px;
+}
+
+input[type="radio"]{
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+input[type="radio"] + label {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  color: #000;
+  padding: 10px 50px;
+  border-radius: 3px;
+  border:1px solid #5655ef;
+  font-size: 13px;
+}
+input[type="radio"]:checked + label{
+  background-color: #5655ef;
+  color: #fff;
+}
+
+input[type="radio"] + label a{
+  color: #000;
+}
+
+input[type="radio"]checked + label a{
+  color: #fff;
+}
+
+    </style>
+
+    <script>
+        google.maps.event.addDomListener(window, 'load', function () 
+{
+    var places = new google.maps.places.Autocomplete(document.getElementById('direccion'));
+    google.maps.event.addListener(places, 'place_changed', function () 
+    {
+        console.log(places.getPlace());
+        var getaddress    = places.getPlace();              //alert(getaddress.address_components[0].long_name);
+        var whole_address = getaddress.address_components;  //alert(whole_address + 'whole_address');   
+        $('#ciudad').val('');
+        $('#estado').val('');
+        $('#pais').val('');
+        $('#colonia').val('');
+        $('#codigo').val('');
+        $.each(whole_address, function(key1, value1) 
+        {
+            console.log(value1.long_name);
+          
+            //alert(value1.types[0]);
+            if((value1.types[0]) == 'locality')
+            {                
+                var prev_long_name_city = value1.long_name;  
+
+                //alert(prev_long_name_city + '__prev_long_name_city');
+                $('#ciudad').val(prev_long_name_city);
+            }
+
+            if((value1.types[0]) == 'administrative_area_level_1')
+            {
+                var prev_long_name_state = value1.long_name;  
+
+                //alert(prev_long_name_state + '__prev_long_name_state');
+                $('#estado').val(prev_long_name_state);
+            }
+
+            if((value1.types[0]) == 'country')
+            {
+                var prev_long_name_country = value1.long_name;  
+
+                //alert(prev_long_name_country + '__prev_long_name_country');
+                $('#pais').val(prev_long_name_country);
+            }
+          
+            if((value1.types[0]) == 'sublocality_level_1')
+            {                
+                var prev_long_name_col = value1.long_name;  
+
+                //alert(prev_long_name_city + '__prev_long_name_city');
+                $('#colonia').val(prev_long_name_col);
+            }
+
+            if((value1.types[0]) == 'postal_code')
+            {
+                var prev_long_name_pincode = value1.long_name;  
+
+                //alert(prev_long_name_pincode + '__prev_long_name_pincode');
+                $('#codigo').val(prev_long_name_pincode);        
+            }
+        }); 
+    });
+  
+ 
+});
+    </script>
+
+    <script>
+		
+		$(document).ready(function(){
+    $("#registro").submit(function(event){
+        event.preventDefault();
+        var formulario = $('#registro').serialize();
+console.log(formulario);
+        $.ajax({
+            url: "https://estacion18bits.com/ropacomonueva/form.php",
+            type: "POST",
+            data: $("#registro").serialize(),
+            success: function(response) {
+                // Mostrar mensaje de éxito o error en la parte superior del formulario
+                var mensaje = JSON.parse(response);
+                if (mensaje.status == "exito") {
+                    $("#mensaje").removeClass("error").addClass("exito").html(mensaje.mensaje).fadeIn();
+                    $("#registro")[0].reset();
+                } else {
+                    $("#mensaje").removeClass("exito").addClass("error").html(mensaje.mensaje).fadeIn();
+                }
+            },
+            error: function() {
+                $("#mensaje").removeClass("exito").addClass("error").html("Ha ocurrido un error al enviar el correo electrónico. Por favor, intenta de nuevo.").fadeIn();
+            }
+        });
+    });
+});
+    </script>
+
+    <script>
+        $("#telefono").intlTelInput({
+	initialCountry: "mx",
+	separateDialCode: true,
+  onlyCountries: ["mx"],
+	// utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+});
+    </script>
+</head>
+<body>
+    
+<div id="mensaje" style="display:none;"></div>
+<form id="registro" method="POST">
+<div class="row">
+    <div class="col">
+      <h2 class="hform"><span>Datos Generales</span></h2></div></div>
+  <div class="row">
+<div class="col">
+ <label for="nombre">Nombres:<span class="required"></span><br>
+  <input type="text" id="nombre" name="nombre" placeholder="Nombres" required /></div>
+  
+ <div class="col">
+ <label for="name">Apellidos<span class="required"></span><br>
+<input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required/>
+   </div>
+  </div>
+  <div class="row">
+<div class="col">
+<label for="nombre">Teléfono:<span class="required"></span><br>
+<input type="text" id="telefono" class="form-control" placeholder="Teléfono" name="telefono" required>
+  </div>
+
+<div class="col">
+<label for="correo">Correo Electrónico<span class="required"></span><br>
+<input type="text" id="correo" name="correo" placeholder="Correo Electrónico" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" title="El correo no está en el formato correcto" required/>
+  </div>
+</div>
+  
+  <div class="row">
+    <div class="col">
+      <h2 class="hform"><span>Dirección de Envío y Recolección</span></h2></div></div>
+  <div class="row">
+    <div class="col">
+<label for="direccion">Calle<span class="required"></span><br>
+<input type="text" id="direccion" name="direccion">
+    </div>
+     <div class="col">
+<label for="name">Número:<span class="required"></span><br>
+<input type="text" id="numero" name="numero" placeholder="#"/>
+    </div>
+    </div>
+      <div class="row">
+    <div class="col">
+
+    <select id="estado" name="estado" onchange="actualizarCiudades()" disabled>
+      <option value="" disabled selected>Selecciona un estado</option>
+    </select>
+    </div>
+    <div class="col">
+
+    <select id="ciudad" name="ciudad" onchange="actualizarColonias()" disabled>
+      <option value="" disabled selected>Selecciona una ciudad</option>
+    </select>
+    </div>
+      </div>
+      <div class="row">
+    <div class="col">
+<label for="name">Código Postal<span class="required"></span><br>
+<input type="text" id="codigo" name="codigo" placeholder="C.P." maxlength="5" pattern="(^([0-9]{5})|^)$" title="El código postal deben ser 5 dígitos numéricos" required/>
+    </div>
+        
+       <div class="col">
+<label for="nombre">Colonia:<span class="required"></span><br>
+ <select id="colonia" name="colonia" disabled>
+      <option value="" disabled selected>Selecciona una colonia</option>
+    </select>
+    <input type="text" name="colonia" id="coloniaInput" placeholder="Escribe una colonia" style="display:none;">
+    </div>
+         </div>
+<div class="row">
+          <div class="col">
+<label for="nombre">Especificación de la dirección:<span class="required"></label><br>
+<input type="text" id="especificacion" name="especificacion" placeholder="Ej: Piso 4 Loft 1." required/>
+    </div>
+  </div>
+      
+<div class="row">
+    <div class="col">
+      <h2 class="hform"><span>Método de envío de tu Ropa<span class="required"></span></h2></div></div>
+      <div class="row">
+    <div class="col">
+      <div class="radio">
+				<input type="radio" name="opciones1" id="opcion1" value="Recolección a mi domicilio GRATIS">
+				<label for="opcion1">
+       <b>Recolección a mi domicilio GRATIS</b>
+<br>Te enviaremos un correo para que selecciones el día de la recolección
+        </label></div>
+        </div>
+       <div class="col">
+         <div class="radio">
+         <input type="radio" name="opciones1" id="opcion2" value="Yo llevo a Centro de Recolección" >
+				<label for="opcion2">
+          <b>Yo llevo a Centro de Recolección</b>
+<br>Ubicado en Av. Gómez Morín, San Pedro Garza García, Nuevo León.
+          </label>
+         </div>
+        </div>
+      </div>
+      
+      <div class="row">
+    <div class="col">
+      <h2 class="hform"><span>¿Que quiero hacer con la ropa no aceptada para vender?<span class="required"></span></h2></div></div>
+      <div class="row">
+    <div class="col">
+      <div class="radio">
+				<input type="radio" name="opciones2" id="opcion12" value="Donar la ropa">
+				<label for="opcion12">
+       <b>Donar la ropa</b>
+<br>Nosotros la donamos por ti para que la ropa tenga una segunda vida<br><br>
+        </label></div>
+        </div>
+       <div class="col">
+         <div class="radio">
+         <input type="radio" name="opciones2" id="opcion22" value="La quiero de regreso">
+				<label for="opcion22">
+          <b>La quiero de regreso</b>
+<br>Podrás tener las prendas de regreso a partir de los 60 días adquiriendo tu envío de retorno.<br><a href="https://ropacomonueva.com/pages/quiero-vender">Consulta nuestras FAQs</a>
+          </label>
+         </div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+    <div class="col">
+      <h2 class="hform"><span>Datos bancarios</span></h2></div></div>
+    <div class="row">
+    <div class="col">
+<label for="nombre">Banco:<span class="required"></span><br>
+  <select name="banco">
+      <option value="no">Banco</option>
+      <option value="Afirme">Afirme</option>
+      <option value="American Express">American Express</option>
+      <option value="Banamex">Banamex</option>
+      <option value="Banco Azteca">Banco Azteca</option>
+      <option value="Banco Base">Banco Base</option>
+      <option value="Banco Invex">Banco Invex</option>
+      <option value="BanCoppel">BanCoppel</option>
+      <option value="Bancrea">Bancrea</option>
+      <option value="Banorte">Banorte</option>
+      <option value="BBVA">BBVA Bancomer</option>
+      <option value="CIBanco">CIBanco</option>
+      <option value="HSBC">HSBC</option>
+      <option value="Intercam">Intercam</option>
+      <option value="Santander">Santander</option>
+      <option value="Scotianbank">Scotianbank</option>
+      <option value="Otro">Otro (Especifica en mensaje)</option>
+  </select>
+    </div>
+    <div class="col">
+<label for="fname">CLABE<span class="required"></span><br>
+<input type="text" id="clabe" name="clabe" placeholder="CLABE" pattern="(^([0-9]{13})|^)$" maxlength="13" title="El número de CLABE debe contar con 18 digitos" required/>
+    </div>
+      </div>
+      <div class="row">
+        <div class="col">
+<label for="nombre">RFC:<span class="required"></span>><br>
+<input type="text" id="rfc" name="rfc" placeholder="RFC" minlength="13" pattern="^(([A-Z]|[a-z]|\s){1})(([A-Z]|[a-z]){3})([0-9]{6})((([A-Z]|[a-z]|[0-9]){3}))" title="EL formato del RFC no es correcto" minlength="10" maxlength="13" required/>
+    </div>
+       <div class="col">
+         <div class="msj"><p>Esta información es necesaria para hacerte llegar tus ganancias**</p>
+    </div>
+  </div>
+      </div>
+              <div class="row">
+    <div class="col">
+      <h2 class="hform"><span>Datos Generales</span></h2></div></div>
+        <div class="row">
+    <div class="col">
+      <label for="mensajetxt">Mensaje:</label><br>
+      <textarea id="mensajetxt" name="mensajetxt" placeholder="Mensaje"/></textarea>
+          </div>
+        </div>
+      <div align="center" class="msjfooter"><p align="center">Llena el formulario, y recibe en tu Correo electrónico y Whatsapp el link para agendar tu recolección <b>gratis a domicilio.</b></p></div>
+      <div align="center" class="enviar"><input class="submit" type="submit" value="Enviar"></div>
+  </div>
+      </div>
+</form>
+
+  <script>
+    let estados;
+
+    // Cargar el archivo JSON
+    fetch('https://estacion18bits.com/ropacomonueva/ciudades.json')
+      .then(response => response.json())
+      .then(data => {
+        estados = data;
+        const selectEstados = document.getElementById('estado');
+        selectEstados.disabled = false;
+
+        for (const estado in estados) {
+          const option = document.createElement('option');
+          option.value = estado;
+          option.text = estado;
+          selectEstados.add(option);
+        }
+      })
+      .catch(error => console.error('Error al cargar el archivo JSON:', error));
+
+    function actualizarCiudades() {
+      const selectEstados = document.getElementById('estado');
+      const selectCiudades = document.getElementById('ciudad');
+      const selectColonias = document.getElementById('colonia');
+
+      selectCiudades.disabled = false;
+      selectColonias.disabled = true;
+
+      selectCiudades.innerHTML = '<option value="" disabled selected>Selecciona una ciudad</option>';
+      selectColonias.innerHTML = '<option value="" disabled selected>Selecciona una colonia</option>';
+
+      const estadoSeleccionado = selectEstados.value;
+      for (const ciudad in estados[estadoSeleccionado]) {
+        const option = document.createElement('option');
+        option.value = ciudad;
+        option.text = ciudad;
+        selectCiudades.add(option);
+      }
+    }
+
+    function actualizarColonias() {
+      const selectEstados = document.getElementById('estado');
+      const selectCiudades = document.getElementById('ciudad');
+      const selectColonias = document.getElementById('colonia');
+      const coloniaInput = document.getElementById('coloniaInput');
+    
+      selectColonias.disabled = false;
+      selectColonias.innerHTML = '<option value="" disabled selected>Selecciona una colonia</option>';
+    
+      const estadoSeleccionado = selectEstados.value;
+      const ciudadSeleccionada = selectCiudades.value;
+    
+      if (estados[estadoSeleccionado][ciudadSeleccionada].length > 0) {
+        for (const colonia of estados[estadoSeleccionado][ciudadSeleccionada]) {
+          const option = document.createElement('option');
+          option.value = colonia;
+          option.text = colonia;
+          selectColonias.add(option);
+        }
+        coloniaInput.style.display = 'none';
+        selectColonias.style.display = 'inline-block';
+      } else {
+        coloniaInput.style.display = 'inline-block';
+        selectColonias.style.display = 'none';
+      }
+    }
+
+  </script>
+</body>
+</html>
