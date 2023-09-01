@@ -139,8 +139,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'X-Mailer: PHP/' . phpversion();
     
     // Enviar el correo electrónico
-    //$destinatario = "hola@ropacomonueva.com";
-    $destinatario = "gryzor110@gmail.com";
+    $destinatario = "hola@ropacomonueva.com";
     $asunto = "Nuevo registro de Vendedor";
 
 if (mail($destinatario, $asunto, $mensaje, $headers)) {
@@ -213,8 +212,7 @@ listo! Nosotros pasamos a recogerla.</p><br><img src="https://i.ibb.co/sVf9FHb/P
     ';
 
     
-    //$emailto = "hola@ropacomonueva.com";
-    $emailto = "gryzor110@gmail.com";
+    $emailto = "hola@ropacomonueva.com";
     $headers_usuario = 'MIME-Version: 1.0' . "\r\n";
     $headers_usuario .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
     $headers_usuario .= 'From:  "RopaComoNueva.com" <' . $emailto .'>' . " \r\n" .
@@ -284,8 +282,7 @@ Horario de entregas: Lunes a Viernes de 9am a 8pm, sábado de 9am a 1pm.</p></p>
     ';
 
     
-    //$emailto = "hola@ropacomonueva.com";
-    $emailto = "gryzor110@gmail.com";
+    $emailto = "hola@ropacomonueva.com";
     $headers_usuario = 'MIME-Version: 1.0' . "\r\n";
     $headers_usuario .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
     $headers_usuario .= 'From:  "RopaComoNueva.com" <' . $emailto .'>' . " \r\n" .
