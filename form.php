@@ -1,8 +1,4 @@
-
-
 <?php
- header("Access-Control-Allow-Origin: *");
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Obtener los datos del formulario
     $nombre = $_POST['nombre'] ?? '';
@@ -163,6 +159,8 @@ if (mail($destinatario, $asunto, $mensaje, $headers)) {
  <tr>
    <td>
      <h3 style="text-align:center; color: #333; padding: 10px;"> ¡Hola! '.$nombre.' 💙 Estás a un paso de vender</h3></td></tr>
+     <tr><td style="text-align:center; padding:10px 10px; background-color: #5655EF; font-weight:600; color: #fff;">AVISO IMPORTANTE</td></tr>
+    <tr><td style="text-align:center; padding: 10px 20px; border-bottom:1px solid #ddd;">Gracias por unirte a este movimiento y darle una segunda vida a más prendas, que de otra forma terminarian sin uso.<br><br><b>Lo lamentamos, pero por el momento NO estamos recolectando ropa.</b><br>Cuando reanudemos la recolección te contactaremos a tus datos de contacto.<br><br>Gracias por tu comprension, RopaComoNueva.com</td></tr>
   <tr><td style="text-align:left; padding:0px 20px;"><p style="font-weight:600">Haz seleccionado </p></td></tr>
   <tr><td><div style="text-align:center; padding:10px; background-color: #E1D8C8; width:540px; margin: 0 auto;"><p style="font-weight:600;"><span style="color:#5655EF;">Opción 1:</span> Recolección a domicilio gratis</p></div></td></tr>
    <tr><td style="text-align:left; padding:0px 20px; font-size:14px;"><p style="font-weight: 600">Responde a este correo con:</p><p>La fecha en la que quieres que pasemos a recoger tu ropa. (Ejemplo: 23 de Noviembre de 2022)</p><p>Horario de Recolección: Lunes a Viernes de 9am a 8pm, sábado de 9am a 1pm<br>
@@ -232,6 +230,8 @@ listo! Nosotros pasamos a recogerla.</p><br><img src="https://i.ibb.co/sVf9FHb/P
  <tr>
    <td>
      <h3 style="text-align:center; color: #333; padding: 10px;"> ¡Hola! '.$nombre.' 💙 Estás a un paso de vender</h3></td></tr>
+     <tr><td style="text-align:center; padding:10px 10px; background-color: #5655EF; font-weight:600; color: #fff;">AVISO IMPORTANTE</td></tr>
+    <tr><td style="text-align:center; padding: 10px 20px; border-bottom:1px solid #ddd;">Gracias por unirte a este movimiento y darle una segunda vida a más prendas, que de otra forma terminarian sin uso.<br><br><b>Lo lamentamos, pero por el momento NO estamos recolectando ropa.</b><br>Cuando reanudemos la recolección te contactaremos a tus datos de contacto.<br><br>Gracias por tu comprension, RopaComoNueva.com</td></tr>
   <tr><td style="text-align:left; padding:0px 20px;"><p style="font-weight:600">Haz seleccionado </p></td></tr>
     <tr><td><div style="text-align:center; padding:10px; background-color: #E1D8C8; width:540px; margin: 0 auto;"><p style="font-weight:600;"><span style="color:#5655EF;">Opción 2:</span> Llévala a nuestro centro de recolección en NL</p></div></td></tr>
    <tr><td style="text-align:left; padding:0px 20px; font-size:14px;"><p style="font-weight: 600">Responde a este correo con:</p><p>La fecha en la que estarías pasando a entregar tu ropa.<br> Te estaremos haciendo llegar un código único para que puedas entregar tu ropa, así la dirección de nuestro centro de recolección.<br>
